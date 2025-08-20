@@ -11,6 +11,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest # 実行環境
 
+    permissions:
+      contents: write
+
     steps:
       # 1. リポジトリのコードをチェックアウト
       - name: Checkout
