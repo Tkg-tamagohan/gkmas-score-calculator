@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es6",              // どのバージョンのJavaScriptに変換するか
+    "module": "commonjs",         // モジュールの形式
+    "outDir": "./dist",           // コンパイル後のJSファイルの出力先フォルダ
+    "rootDir": "./src",           // TypeScriptソースコードのルートフォルダ
+    "strict": true,               // 厳格な型チェックを有効にする
+    "esModuleInterop": true
+  }
+}

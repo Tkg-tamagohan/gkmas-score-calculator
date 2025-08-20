@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+# mainブランチにpushされたときにこのワークフローを実行
+on:
+  push:
+    branches:
+      - main
+
+# 1つのジョブ（一連の処理）を定義
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 実行環境
+
+    steps:
+      # 1. リポジトリのコードをチェックアウト
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # 2. Node.js環境をセットアップ
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # 使用するNode.jsのバージョン
+
+      # 3. 依存パッケージをインストール
+      - name: Install dependencies
+        run: npm install
+
+      # 4. TypeScriptをビルド (npm run build を実行)
+      - name: Build
+        run: npm run build
+
+      # 5. ビルド成果物(distフォルダ)をGitHub Pagesにデプロイ
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # 公開するフォルダを指定

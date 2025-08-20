@@ -1,0 +1,24 @@
+{
+  "name": "gkmas-score-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tkg-tamagohan/gkmas-score-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tkg-tamagohan/gkmas-score-calculator/issues"
+  },
+  "homepage": "https://github.com/Tkg-tamagohan/gkmas-score-calculator#readme",
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}
