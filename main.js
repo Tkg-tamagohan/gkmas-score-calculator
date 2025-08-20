@@ -1,5 +1,5 @@
 "use strict";
 const app = document.getElementById('app');
 if (app) {
-    app.innerHTML = 'VSCodeでTypeScriptからコンパイルされました！';
+    app.innerHTML = 'Test';
 }
